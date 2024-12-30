@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.columns {
+  flex-direction: column;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#head{
+  width: 100%;
+  height: 10%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  transition: all ease 600ms;
+  z-index: 100;
+}
+.left-box .langaue-box {
+  position: relative;
+}
+.lang-head {
+  color: white;
+  margin: 0 10px;
+}
+.langauge {
+  list-style: none;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  background-color: white;
+  padding: 5px 10px;
+  display: none;
+}
+.langauge li {
+  padding: 10px 5px;
+  cursor: pointer;
+  color: black;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.left-box img {
+  width: 200px;
+}
+.navbar {
+  list-style: none;
+  justify-content: space-evenly;
+  margin-left: 3rem;
+}
+.navbar li {
+  position: relative;
+}
+.navbar li.active {
+  color: aqua;
+}
+.navbar li:hover::after,
+.navbar li.active::after {
+  width: 20px;
+  height: 4px;
+  content: "";
+  background-color: aqua;
+  position: absolute;
+  bottom: -4px;
+  left: 10px;
+  border-radius: 2px;
+  border: none;
+}
+.navbar li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 0 10px;
+  font-weight: 600;
+}
+.right-box {
+  padding: 0 10px;
+}
+.right-box ul {
+  list-style: none;
+  justify-content: space-evenly;
+  color: #fff;
+  /* margin-left: 3rem; */
+}
+.right-box ul li {
+  padding: 0 15px;
+}
+.right-box ul li i {
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+.flex li button {
+  background: none;
+  border: none;
+  width: 30px;
+}
+
+/*  Background section or container */
+
+.background-container {
+  /* background-image: url("./img/banner-bg.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+.movies-details {
+  padding-left: 3rem;
+  width: 50%;
+  height: 80%;
+  align-items: flex-start;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.bg-para, p {
+  font-size: 1rem;
+  color: lightgrey;
+  margin: 10px 0;
+}
+.btn .button {
+  font-size: 20px;
+  background: transparent;
+  color: white;
+  padding: 5px 10px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+button{
+  animation: colorchange 5s infinite;
+}
+.btn .black {
+  font-size: 20px;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+}
+
+/*  movies section or container  */
+.movies-container {
+  margin: 41px 1rem;
+}
+.movies-list {
+  padding: 10px;
+}
+.movies-list .heading {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: grey;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.movies-list h3 span {
+  font-size: 17px;
+  margin: 0 10px;
+  color: #54b9c5;
+  display: none;
+}
+.movies-list h3:hover .explore {
+  display: inline-block;
+}
+.movies-list .img-box {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.movies-list .img-box img {
+  width: 250px;
+  object-fit: contain;
+  margin-right: 6px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.movies-list .img-box img:hover {
+  transform: scale(1.1);
+}
+/*  Footer section or container */
+
+.footer-container {
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.footer-list {
+  list-style: none;
+}
+.footer-list li {
+  margin: 15px 0;
+}
+.footer-list i {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.footer-list li a {
+  color: grey;
+  text-decoration: none;
+}
+.footer-list li a:hover {
+  color: grey;
+}
+.footer-list li button {
+  font-size: 1rem;
+  padding: 8px;
+  background: transparent;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  animation: colorchage 5s infinite;
+  color: grey;
+}
+
+/*   selector on section */
+
+.show {
+  display: flex;
+  flex-direction: column;
+}
+
+#head.black-bg{
+  background-color: rgb(20, 20, 20);
+}
+
+@keyframes colorchange {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: black;
+  }
+  50% {
+    border-color: purple;
+  }
+  100% {
+    border-color: green;
+  }
+}
+#bar-container{
+  display: none;
+}
+#close{
+  display: none;
+}
+#navbar.navbar-color a{
+  color: #fff;
+}
+#footer-list.navbar-color a{
+  color: #fff;
+}
+
+/*  */
+@media only screen and (max-width: 990px) {
+ 
+#bar-container{
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  display: flex;
+  cursor: pointer;
+}
+#close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  cursor: pointer;
+}
+.left-box img {
+  width: 130px;
+}
+.navbar{
+  background-color: white;
+  width: 30%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 3rem;
+  gap: 2.5rem;
+  color: black;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  transition: 0.5s ease;
+}
+.moving{
+  left: 0px;
+}
+.navbar li a{
+  color: black;
+}
+.movies-details{
+  width: 100%;
+  height: 100%;
+}
+.bg-para, p{
+  width: 70%;
+  color: #fff;
+}
+.footer-container{
+  flex-direction: column;
+}
+.footer-list li a{
+  font-size: 1.1rem;
+}
+}
+
+@media only screen and (max-width: 400px){
+  #bar-container {
+    color: white;
+    font-size: 1rem;
+    /* margin-left: 2rem; */
+    display: flex;
+    cursor: pointer;
+}
+.background-container{
+  background-position: center;
+  height: 60vh;
+}
+.movies-details{
+  padding-left: 10px;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+.bg-para, p{
+  font-size: 10px;
+  width: 90%;
+}
+.btn .button, .btn .black{
+  font-size: 10px;
+  padding: 3px 15px;
+}
+}
